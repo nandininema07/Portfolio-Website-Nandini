@@ -6,49 +6,34 @@ import { Card, CardContent } from '@/components/ui/card'
 export function Experience() {
   const experiences = [
     {
-      title: "Senior Full Stack Developer",
-      company: "TechCorp Solutions",
-      duration: "2023 - Present",
-      location: "San Francisco, CA",
-      type: "Full-time",
+      title: "Full Stack Developer Intern",
+      company: "Indian Institute of Technology, Bombay",
+      duration: "January 2025 - Present",
+      location: "Mumbai, Maharashtra, India",
+      type: "Internship",
       description: "Leading development of scalable web applications and AI-powered features for enterprise clients.",
       achievements: [
-        "Increased application performance by 40% through optimization",
-        "Led a team of 5 developers on multiple high-impact projects",
-        "Implemented ML models that improved user engagement by 60%",
+        "Built backend logic for organizations of national importance",
+        "Leveraged modern front-end technologies to create responsive, user-friendly interfaces",
+        "Collaborated with a team of 5 developers on multiple high-impact projects", 
         "Architected microservices infrastructure serving 1M+ users"
       ],
-      technologies: ["React", "Node.js", "Python", "AWS", "MongoDB", "TensorFlow"]
-    },
-    {
-      title: "Full Stack Developer",
-      company: "StartupX",
-      duration: "2022 - 2023",
-      location: "Austin, TX",
-      type: "Full-time",
-      description: "Developed and maintained full-stack applications using modern web technologies.",
-      achievements: [
-        "Built responsive web applications serving 100K+ users",
-        "Reduced load times by 50% through code optimization",
-        "Implemented real-time features using WebSocket technology",
-        "Collaborated with design team to improve UX metrics by 35%"
-      ],
-      technologies: ["Next.js", "Express", "PostgreSQL", "Redis", "Docker"]
+      technologies: ["React", "Node.js", "Django", "Python", "Flask", "Firebase"]
     },
     {
       title: "Frontend Developer Intern",
-      company: "Digital Agency Pro",
-      duration: "2021 - 2022",
-      location: "Remote",
+      company: "Plasmid Innovations",
+      duration: "August 2024 - October 2024",
+      location: "Mumbai, Maharashtra, India",
       type: "Internship",
-      description: "Focused on creating engaging user interfaces and improving user experience.",
+      description: "Developed and maintained full-stack applications using modern web technologies.",
       achievements: [
-        "Developed 20+ responsive web components",
-        "Improved accessibility scores by 30% across projects",
-        "Contributed to open-source UI component library",
-        "Mentored 3 junior interns in React development"
+        "Built responsive web applications serving 100K+ users",
+        "Created responsive web applications for development of startups",
+        "Actively involved in the development phase in a startup environment",
+        "Collaborated with design team to improve UX metrics by 35%"
       ],
-      technologies: ["React", "TypeScript", "Tailwind CSS", "Figma"]
+      technologies: ["React", "Node.js", "Express", "MongoDB", "Bootstrap"]
     }
   ]
 

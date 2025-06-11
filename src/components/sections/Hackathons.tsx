@@ -10,44 +10,43 @@ export function Hackathons() {
 
   const hackathons = [
     {
-      name: "Global AI Challenge 2024",
+      name: "Data 2 Knowledge 3.0",
       position: "1st Place Winner",
-      team: "Team Innovators",
+      team: "Team Gradient Flow",
       duration: "48 hours",
-      date: "March 2024",
-      project: "AI-Powered Healthcare Assistant",
-      description: "Developed an intelligent healthcare chatbot that can diagnose symptoms and recommend treatments using advanced NLP models.",
-      technologies: ["Python", "TensorFlow", "OpenAI API", "React", "Node.js"],
-      achievements: ["$50,000 prize money", "Mentorship from industry experts", "Featured in tech magazines"],
+      date: "March 2025",
+      project: "Agentic AI Platform for Streamlined Agent Development",
+      description: "Developed an agentic AI platform that can streamline the development of agents for various use cases.",
+      technologies: ["Next.js", "React Flow","SQLAlchemy","HuggingFace","FastAPI", "Python", "Axios"],
+      achievements: ["$10,000 prize money", "Mentorship from industry experts", "Featured in tech magazines"],
       links: {
-        demo: "#",
-        github: "#"
+        demo: "https://www.youtube.com/watch?v=9vzwt6VrFLQ"
       }
     },
     {
-      name: "HackTech 2023",
+      name: "Frontend Arena",
       position: "2nd Place",
-      team: "Code Crusaders",
-      duration: "36 hours",
-      date: "November 2023",
-      project: "EcoTrack - Carbon Footprint Tracker",
-      description: "Built a comprehensive platform to track and reduce personal carbon footprint with gamification elements.",
-      technologies: ["Next.js", "MongoDB", "Python", "Chart.js", "Firebase"],
-      achievements: ["$25,000 prize", "Best UI/UX Award", "Partnership offer from sustainability startup"],
+      team: "Team React Masters",
+      duration: "24 hours",
+      date: "March 2024",
+      project: "Fambot - AI Powered Home Assistance Robot",
+      description: "Built a comprehensive platform to transform homes with intelligent robotics and AI-powered assistance",
+      technologies: ["Next.js", "TypeScript", "Spline", "Three.js", "Framer Motion", "Tailwind CSS"],
+      achievements: ["$10,000 prize", "Best UI/UX Award", "Partnership offer from sustainability startup"],
       links: {
-        demo: "#",
-        github: "#"
+        website: "https://react-masters-fambot.vercel.app/",
+        github: "https://github.com/nandininema07/React-Masters.git"
       }
     },
     {
-      name: "MLH Local Hack Day",
-      position: "1st Place",
-      team: "Solo Project",
-      duration: "12 hours",
-      date: "September 2023",
-      project: "StudyBuddy - AI Study Companion",
-      description: "Created an AI-powered study assistant that generates personalized quizzes and study plans.",
-      technologies: ["React Native", "FastAPI", "SQLite", "Hugging Face"],
+      name: "Dev Quest Hackathon - IIT Jodhpur",
+      position: "Finalist",
+      team: "Team Innovizia",
+      duration: "24 hours",
+      date: "January 2025",
+      project: "Arogyam - Machine Learning Ayurveda Recommendation System",
+      description: "Created an AI-powered Ayurveda recommendation system that can recommend Ayurvedic remedies for various diseases.",
+      technologies: ["React", "OpenCV", "Flask", "Node.js","Mongoose"],
       achievements: ["Best Solo Project", "Most Innovative Use of AI", "MLH Top 50 Global"],
       links: {
         demo: "#",
@@ -56,24 +55,54 @@ export function Hackathons() {
     },
     {
       name: "NASA Space Apps Challenge",
-      position: "3rd Place",
-      team: "Space Explorers",
-      duration: "48 hours",
-      date: "October 2022",
-      project: "Mars Weather Predictor",
-      description: "Developed a machine learning model to predict Mars weather patterns using NASA's open data.",
-      technologies: ["Python", "Scikit-learn", "D3.js", "Flask", "NASA APIs"],
+      position: "Finalist",
+      team: "Team Cosmic Hacktivists",
+      duration: "24 hours",
+      date: "October 2024",
+      project: "SeismoTrack - Seismic Tracking System for Celestial Bodies",
+      description: "Designed and implemented a machine learning pipeline for seismic event analysis, data filtering, and transmission optimization across multiple celestial bodies (3+) using NASA's publicly available seismic datasets.",
+      technologies: ["Scikit-learn", "SciPy", "Flask", "NASA APIs", "D3.js", "Python"],
       achievements: ["NASA recognition", "Featured on Space Apps website", "Invitation to NASA facility tour"],
       links: {
         demo: "#",
         github: "#"
       }
-    }
+    },
+    {
+      name: "Pixel Paranoia 2024",
+      position: "Top 10 Finalists",
+      team: "Team Interface Innovators",
+      duration: "12 hours",
+      date: "October 2024",
+      project: "TechLearn - Community Driven Tech Learning Platform",
+      description: "Developed a community driven tech learning platform to foster development culture in young generations",
+      technologies: ["Figma"],
+      achievements: ["Top 10 Finalists"],
+      links: {
+        demo: "#",
+        github: "#"
+      }
+    },
+    {
+      name: "Smart India Hackathon 2023",
+      position: "All India Top 6",
+      team: "Team Rising Coders",
+      duration: "3 months",
+      date: "August 2023 - November 2023",
+      project: "Robust Human Target Detection and Acquisition System for Surveillance",
+      description: "Developed a robust human target detection and acquisition system for surveillance using computer vision and machine learning techniques for the Indian Ministry of Defence.",
+      technologies: ["React Native", "OpenCV", "AWS", "Expo-CLI","Amazon Rekognition"],
+      achievements: ["Top 6 All India"],
+      links: {
+        demo: "#",
+        github: "#"
+      }
+    },
   ]
 
   const stats = [
     { number: "15+", label: "Hackathons Participated" },
-    { number: "8", label: "Awards Won" },
+    { number: "6", label: "Awards Won" },
     { number: "120+", label: "Hours Coded" },
     { number: "50+", label: "Developers Collaborated" }
   ]

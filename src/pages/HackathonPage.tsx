@@ -3,6 +3,7 @@ import { useEffect } from 'react'
 import { Navigation } from '@/components/Navigation'
 import { Footer } from '@/components/sections/Footer'
 import { HackathonDetail } from '@/components/sections/HackathonDetail'
+import { ThemeProvider } from '@/components/ThemeProvider'
 
 export default function HackathonPage() {
   const { id } = useParams<{ id: string }>()
@@ -13,20 +14,19 @@ export default function HackathonPage() {
 
   const hackathons = [
     {
-      name: "Global AI Challenge 2024",
+      name: "Data 2 Knowledge 3.0",
       position: "1st Place Winner",
-      team: "Team Innovators",
+      team: "Team Gradient Flow",
       duration: "48 hours",
-      date: "March 2024",
-      project: "AI-Powered Healthcare Assistant",
-      description: "Developed an intelligent healthcare chatbot that can diagnose symptoms and recommend treatments using advanced NLP models.",
-      technologies: ["Python", "TensorFlow", "OpenAI API", "React", "Node.js"],
-      achievements: ["$50,000 prize money", "Mentorship from industry experts", "Featured in tech magazines"],
+      date: "March 2025",
+      project: "AgentFlow - Agentic AI Platform for Streamlined Agent Development",
+      description: "Developed an agentic AI platform that can streamline the development of agents for various use cases.",
+      technologies: ["Next.js", "React Flow","SQLAlchemy","HuggingFace","FastAPI", "Python", "Axios"],
+      achievements: ["Rs.40,000 prize money", "Mentorship from industry experts", "Featured in tech magazines"],
       links: {
-        demo: "#",
-        github: "#"
+        demo: "https://www.youtube.com/watch?v=9vzwt6VrFLQ",
       },
-      detailedDescription: "Our AI-Powered Healthcare Assistant revolutionizes patient care by providing instant, accurate medical consultations. Using cutting-edge natural language processing and machine learning algorithms, the system can understand patient symptoms, ask relevant follow-up questions, and provide preliminary diagnoses with treatment recommendations. The platform integrates with existing healthcare systems and maintains strict HIPAA compliance.",
+      detailedDescription: "AgentFlow, is an AI Agent Marketplace that change the game for how AI agents collaborate and automate workflows. Instead of passive AI tools that wait to be told what to do, we introduced Active AI Agents—ones that work 24/7, proactively engaging users via calls, emails, and chatbot updates, and autonomously generating workflows from simple user prompts. It's AI that listens, learns, and acts—no hand-holding required!",
       challenges: [
         "Ensuring medical accuracy while avoiding misdiagnosis",
         "Integrating multiple AI models for comprehensive analysis",
@@ -40,125 +40,225 @@ export default function HackathonPage() {
         "Developed end-to-end encryption for all patient interactions"
       ],
       impact: "Our solution has the potential to provide healthcare access to underserved communities and reduce wait times in emergency departments by 40%. Post-hackathon, we received interest from 3 major healthcare networks for pilot programs.",
-      teamMembers: ["John Doe (AI/ML)", "Jane Smith (Backend)", "Alex Johnson (Frontend)", "Sarah Wilson (UI/UX)"],
       timeline: [
-        { time: "Hour 0-6", activity: "Problem analysis, team formation, and initial research" },
-        { time: "Hour 6-18", activity: "Backend development and AI model integration" },
-        { time: "Hour 18-30", activity: "Frontend development and UI/UX design" },
-        { time: "Hour 30-42", activity: "Testing, bug fixes, and performance optimization" },
-        { time: "Hour 42-48", activity: "Final testing, presentation preparation, and demo" }
-      ]
+        { time: "Hour 0-8", activity: "Problem analysis, team formation, and initial research on AI agent development" },
+        { time: "Hour 8-20", activity: "Backend development with FastAPI and SQLAlchemy integration" },
+        { time: "Hour 20-32", activity: "AI model integration with HuggingFace and agent workflow development" },
+        { time: "Hour 32-40", activity: "Frontend development with Next.js and React Flow implementation" },
+        { time: "Hour 40-48", activity: "Testing, bug fixes, and final presentation preparation" }
+      ],
+      images: [
+        "/D2K 1.jpeg",
+        "/D2K 3.jpeg",
+        "/D2K 2.jpeg"
+      ],
+      teamMembers: ["John Doe (Team Lead)", "Jane Smith (Backend)", "Mike Johnson (Frontend)", "Sarah Wilson (Design)"]
     },
     {
-      name: "HackTech 2023",
+      name: "Frontend Arena",
       position: "2nd Place",
-      team: "Code Crusaders",
-      duration: "36 hours",
-      date: "November 2023",
-      project: "EcoTrack - Carbon Footprint Tracker",
-      description: "Built a comprehensive platform to track and reduce personal carbon footprint with gamification elements.",
-      technologies: ["Next.js", "MongoDB", "Python", "Chart.js", "Firebase"],
-      achievements: ["$25,000 prize", "Best UI/UX Award", "Partnership offer from sustainability startup"],
+      team: "Team React Masters",
+      duration: "24 hours",
+      date: "March 2025",
+      project: "Fambot - AI Powered Home Assistance Robot",
+      description: "Built a comprehensive platform to transform homes with intelligent robotics and AI-powered assistance",
+      technologies: ["Next.js", "TypeScript", "Spline", "Three.js", "Framer Motion", "Tailwind CSS"],
+      achievements: ["Rs.3,000 prize", "Best UI/UX Award", "Mentorship from industry experts"],
       links: {
-        demo: "#",
-        github: "#"
+        website: "https://react-masters-fambot.vercel.app/",
+        github: "https://github.com/nandininema07/React-Masters"
       },
-      detailedDescription: "EcoTrack transforms environmental consciousness into engaging action through advanced tracking and gamification. Users can monitor their daily activities, transportation choices, energy consumption, and waste generation while competing with friends and earning rewards for sustainable behaviors.",
+      detailedDescription: "Fambot is a state-of-the-art AI-powered home assistance robot designed to cater to every member of the household. It combines smart home integration, interactive companionship, and emotional intelligence, making it not just a tool, but a true family member.",
       challenges: [
-        "Accurate carbon footprint calculations across diverse activities",
-        "Creating engaging gamification without greenwashing",
-        "Real-time data collection from multiple sources",
+        "Creating an intuitive and user-friendly interface for both children and adults",
+        "Ensuring the robot's emotional intelligence is natural and not robotic",
+        "Developing a robust system for real-time data collection and analysis",
         "Building intuitive data visualization for complex metrics"
       ],
       solutions: [
-        "Integrated multiple carbon calculation APIs and databases",
-        "Designed reward system based on actual environmental impact",
-        "Implemented IoT device integration for automatic tracking",
-        "Created interactive charts with personalized insights"
+        "Developed a user-friendly interface that is easy to use for both children and adults",
+        "Implemented a robust system for real-time data collection and analysis",
+        "Developed a robust system for real-time data collection and analysis",
+        "Developed a robust system for real-time data collection and analysis"
       ],
       impact: "Beta testing showed users reduced their carbon footprint by an average of 23% within the first month. The platform now has partnerships with 5 environmental organizations.",
-      teamMembers: ["Mike Chen (Full Stack)", "Lisa Wang (Data Science)", "Tom Brown (Mobile)", "Emma Davis (Design)"],
+      teamMembers: ["Alex Brown (Team Lead)", "Emma Davis (Backend)", "Chris Wilson (Frontend)", "Lisa Chen (Design)"],
       timeline: [
-        { time: "Hour 0-8", activity: "Market research and feature planning" },
-        { time: "Hour 8-20", activity: "Core platform development and database setup" },
-        { time: "Hour 20-28", activity: "Gamification features and user interface" },
-        { time: "Hour 28-34", activity: "Data visualization and testing" },
-        { time: "Hour 34-36", activity: "Final polish and presentation" }
-      ]
+        { time: "Hour 0-4", activity: "Market research and feature planning for home assistance robot" },
+        { time: "Hour 4-12", activity: "3D model development with Spline and Three.js integration" },
+        { time: "Hour 12-18", activity: "Frontend development with Next.js and Framer Motion animations" },
+        { time: "Hour 18-22", activity: "UI/UX refinement and responsive design implementation" },
+        { time: "Hour 22-24", activity: "Final testing and presentation preparation" }
+      ],
+      images: [
+        "/Frontend Arena 1.jpeg",
+        "/Frontend Arena 3.jpeg",
+        "/Frontend Arena 2.jpeg"
+      ],
     },
     {
-      name: "MLH Local Hack Day",
-      position: "1st Place",
-      team: "Solo Project",
-      duration: "12 hours",
-      date: "September 2023",
-      project: "StudyBuddy - AI Study Companion",
-      description: "Created an AI-powered study assistant that generates personalized quizzes and study plans.",
-      technologies: ["React Native", "FastAPI", "SQLite", "Hugging Face"],
-      achievements: ["Best Solo Project", "Most Innovative Use of AI", "MLH Top 50 Global"],
+      name: "Dev Quest Hackathon - IIT Jodhpur",
+      position: "Finalist",
+      team: "Team Innovizia",
+      duration: "24 hours",
+      date: "January 2025",
+      project: "Arogyam - Machine Learning Ayurveda Recommendation System",
+      description: "Created an AI-powered Ayurveda recommendation system that can recommend Ayurvedic remedies for various diseases.",
+      technologies: ["React", "OpenCV", "Flask", "Node.js","Mongoose"],
+      achievements: ["Most Innovative Use of AI", "Networking with developers across India"],
       links: {
-        demo: "#",
-        github: "#"
+        demo: "https://drive.google.com/file/d/1yu2rLFBEQvDPrws_2Sejh485M0FP2nlp/view?usp=sharing",
+        github: "https://github.com/nandininema07/Innovatrix-DevQuest"
       },
-      detailedDescription: "StudyBuddy is an AI-powered study companion designed to make learning more efficient and personalized. By leveraging advanced natural language processing and machine learning techniques, StudyBuddy can generate custom quizzes, provide detailed explanations, and adapt to the user's learning style in real-time.",
+      detailedDescription: "Arogyam is an AI-powered wellness platform that analyzes facial features and nails to assess a user's Ayurvedic dosha (Vata, Pitta, or Kapha). Users upload or record a short video, and based on visual cues, the system offers personalized health and lifestyle recommendations. Verified by Ayurvedic experts and delivered via WhatsApp, Arogyam also helps practitioners track patient symptoms over time through interactive charts—making holistic health simple, smart, and accessible.",
       challenges: [
-        "Creating a truly personalized learning experience",
-        "Ensuring the accuracy and relevance of AI-generated content",
-        "Balancing AI assistance with active learning",
-        "Developing a user-friendly interface for mobile devices"
+        "Ensuring medical accuracy while avoiding misdiagnosis",
+        "Integrating multiple AI models for comprehensive analysis",
+        "Managing real-time data processing under time constraints",
+        "Implementing secure patient data handling"
       ],
       solutions: [
-        "Implemented a dynamic learning algorithm that adapts to user performance",
-        "Integrated multiple educational APIs for content validation",
-        "Designed a spaced repetition system to reinforce learning",
-        "Optimized the app for offline use and low-bandwidth environments"
+        "Developed a robust facial recognition system using OpenCV",
+        "Integrated multiple Ayurvedic AI models for comprehensive analysis",
+        "Created an interactive dashboard for symptom tracking and analysis",
+        "Developed a secure patient data handling system"
       ],
       impact: "StudyBuddy has been used by over 5,000 students and has shown a 30% increase in test scores. The project was featured in the MLH Top 50 Global and received positive feedback from educators.",
       teamMembers: ["Solo Project - Alex Johnson"],
       timeline: [
-        { time: "Hour 0-2", activity: "Concept development and research" },
-        { time: "Hour 2-6", activity: "Backend development and AI model integration" },
-        { time: "Hour 6-10", activity: "Frontend development and UI/UX design" },
-        { time: "Hour 10-12", activity: "Testing, bug fixes, and presentation preparation" }
-      ]
+        { time: "Hour 0-4", activity: "Research on Ayurvedic principles and dosha analysis" },
+        { time: "Hour 4-10", activity: "OpenCV integration for facial and nail analysis" },
+        { time: "Hour 10-16", activity: "Flask backend development and ML model integration" },
+        { time: "Hour 16-20", activity: "React frontend development and WhatsApp integration" },
+        { time: "Hour 20-24", activity: "Testing with Ayurvedic experts and final presentation" }
+      ],
+      images: [
+        "/Devquest 1.jpeg",
+        "/Devquest 2.jpeg",
+        "/Devquest 3.jpeg"
+      ],
     },
     {
       name: "NASA Space Apps Challenge",
-      position: "3rd Place",
-      team: "Space Explorers",
-      duration: "48 hours",
-      date: "October 2022",
-      project: "Mars Weather Predictor",
-      description: "Developed a machine learning model to predict Mars weather patterns using NASA's open data.",
-      technologies: ["Python", "Scikit-learn", "D3.js", "Flask", "NASA APIs"],
-      achievements: ["NASA recognition", "Featured on Space Apps website", "Invitation to NASA facility tour"],
+      position: "Finalist",
+      team: "Team Cosmic Hacktivists",
+      duration: "24 hours",
+      date: "October 2024",
+      project: "SeismoTrack - Seismic Tracking System for Celestial Bodies",
+      description: "Designed and implemented a machine learning pipeline for seismic event analysis, data filtering, and transmission optimization across multiple celestial bodies (3+) using NASA's publicly available seismic datasets.",
+      technologies: ["Scikit-learn", "SciPy", "Flask", "NASA APIs", "D3.js", "Python"],
+      achievements: ["NASA recognition", "Featured on Space Apps website", "Mentorship from industry experts"],
       links: {
-        demo: "#",
-        github: "#"
+        demo: "https://drive.google.com/file/d/1xxclNNm0j-GZ2BTEgpB1xp2_UAfmpjGc/view?usp=sharing",
+        github: "https://github.com/AAGAM17/sesimotrack"
       },
-      detailedDescription: "The Mars Weather Predictor is a machine learning model that forecasts weather patterns on Mars using historical data from NASA's rovers and satellites. By analyzing temperature, pressure, wind speed, and atmospheric composition, the model provides accurate predictions for future Martian weather conditions.",
+      detailedDescription: "SeismoTrack is a machine learning pipeline that analyzes seismic data from multiple celestial bodies to detect and track seismic events. It uses advanced machine learning techniques to filter and analyze data, and provides real-time updates on seismic activity across the solar system.",
       challenges: [
         "Handling incomplete and noisy data from NASA's APIs",
-        "Developing a model that generalizes well to new Martian regions",
-        "Visualizing complex weather data in an intuitive way",
+        "Developing a model that generalizes well to new celestial bodies",
+        "Visualizing complex seismic data in an intuitive way",
         "Optimizing the model for real-time predictions"
       ],
       solutions: [
-        "Implemented data cleaning and imputation techniques",
-        "Used ensemble learning to improve model robustness",
-        "Created interactive D3.js visualizations",
+        "Developed a robust machine learning pipeline for seismic event analysis",
+        "Created interactive D3.js visualizations for real-time seismic data",
+        "Optimized the model for real-time predictions",
         "Deployed the model on a Flask server for real-time predictions"
       ],
-      impact: "The Mars Weather Predictor was recognized by NASA for its innovative use of open data and its potential to support future Martian missions. The project was featured on the Space Apps website and the team received an invitation to tour a NASA facility.",
-      teamMembers: ["Emily White (Data Science)", "David Green (Backend)", "Sophia Lee (Frontend)", "Ryan Clark (Visualization)"],
+      impact: "The SeismoTrack was recognized by NASA for its innovative use of open data and its potential to support future Martian missions. The project was featured on the Space Apps website and the team received an invitation to tour a NASA facility.",
+      teamMembers: ["Nandini Nema (Frontend)"],
       timeline: [
-        { time: "Hour 0-6", activity: "Data collection and preprocessing" },
-        { time: "Hour 6-18", activity: "Model development and training" },
-        { time: "Hour 18-30", activity: "Visualization and dashboard creation" },
-        { time: "Hour 30-42", activity: "Deployment and testing" },
-        { time: "Hour 42-48", activity: "Presentation preparation and final touches" }
-      ]
-    }
+        { time: "Hour 0-6", activity: "NASA API integration and seismic data collection" },
+        { time: "Hour 6-14", activity: "ML pipeline development with Scikit-learn and SciPy" },
+        { time: "Hour 14-20", activity: "D3.js visualization development for seismic data" },
+        { time: "Hour 20-24", activity: "Flask server deployment and final testing" }
+      ],
+      images: [
+        "/NASA 1.png",
+        "/NASA 2.jpg",
+        "/NASA 3.png"
+      ],
+    },
+    {
+      name: "Pixel Paranoia 2024",
+      position: "Top 10 Finalists",
+      team: "Team Interface Innovators",
+      duration: "12 hours",
+      date: "October 2024",
+      project: "TechLearn - Community Driven Tech Learning Platform",
+      description: "Developed a community driven tech learning platform to foster development culture in young generations",
+      technologies: ["Figma"],
+      achievements: ["Top 10 Finalists"],
+      links: {
+        demo: "https://www.figma.com/proto/xL3SmRlFgEVgf3EF0r73Co/Interface-Innovators?page-id=0%3A1&node-id=40-333&p=f&viewport=52%2C292%2C0.04&t=HrfL5hN8QH2idD7d-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=40%3A177"
+      },
+      detailedDescription: "TechLearn is a community driven tech learning platform that fosters development culture in young generations. It provides a platform for students to learn about various technologies and tools, and to connect with other students who are interested in the same technologies.",
+      challenges: [
+        "Creating a platform that is easy to use and understand for young generations",
+        "Ensuring the platform is secure and reliable",
+        "Developing a platform that is scalable and can handle large amounts of data",
+        "Creating a platform that is accessible to all students"
+      ],
+      solutions: [
+        "Created a platform that is easy to use and understand for young generations",
+        "Ensured the platform is secure and reliable",
+        "Developed a platform that is scalable and can handle large amounts of data",
+        "Created a platform that is accessible to all students"
+      ],
+      impact: "The TechLearn platform has been recognized by the industry experts and they believe that it has the potential to change the way we learn and teach.",
+      teamMembers: ["Nandini Nema (Frontend)"],
+      timeline: [
+        { time: "Hour 0-3", activity: "User research and learning platform requirements analysis" },
+        { time: "Hour 3-6", activity: "Wireframing and initial UI design in Figma" },
+        { time: "Hour 6-9", activity: "Interactive prototype development" },
+        { time: "Hour 9-12", activity: "Final UI polish and presentation preparation" }
+      ],
+      images: [
+        "/pixel1.jpeg",
+        "/pixel2.jpeg",
+        "/pixel3.jpeg"
+      ],
+    },
+    {
+      name: "Smart India Hackathon 2023",
+      position: "All India Top 6",
+      team: "Team Rising Coders",
+      duration: "3 months",
+      date: "August 2023 - November 2023",
+      project: "Robust Human Target Detection and Acquisition System for Surveillance",
+      description: "Developed a robust human target detection and acquisition system for surveillance using computer vision and machine learning techniques for the Indian Ministry of Defence.",
+      technologies: ["React Native", "OpenCV", "AWS", "Expo-CLI","Amazon Rekognition"],
+      achievements: ["Top 6 All India"],
+      links: {
+        
+      },
+      detailedDescription: "The project is a robust human target detection and acquisition system for surveillance using computer vision and machine learning techniques for the Indian Ministry of Defence. It uses advanced computer vision techniques to detect and track human targets in real-time and provides real-time updates on the target's location and status.",
+      challenges: [
+        "Developing a model that generalizes well to new celestial bodies",
+        "Visualizing complex seismic data in an intuitive way",
+        "Optimizing the model for real-time predictions"
+      ],
+      solutions: [
+        "Developed a robust machine learning pipeline for seismic event analysis",
+        "Created interactive D3.js visualizations for real-time seismic data",
+        "Optimized the model for real-time predictions",
+        "Deployed the model on a Flask server for real-time predictions"
+      ],
+      impact: "The SeismoTrack was recognized by NASA for its innovative use of open data and its potential to support future Martian missions. The project was featured on the Space Apps website and the team received an invitation to tour a NASA facility.",
+      teamMembers: ["Nandini Nema (Frontend)"],
+      timeline: [
+        { time: "Month 1", activity: "Requirements analysis and system architecture design" },
+        { time: "Month 2", activity: "Computer vision model development with OpenCV and AWS Rekognition" },
+        { time: "Month 3", activity: "React Native app development and real-time tracking implementation" },
+        { time: "Final Week", activity: "System integration, testing, and final presentation" }
+      ],
+      images: [
+        "/SIH2023 1.jpeg",
+        "/SIH2023 2.jpeg",
+        "/SIH2023 3.jpeg"
+      ],
+    },
+
   ]
 
   const hackathonIndex = parseInt(id || '0', 10)
@@ -169,13 +269,15 @@ export default function HackathonPage() {
   }
 
   return (
-    <div className="min-h-screen bg-background" style={{ scrollBehavior: 'auto' }}>
-      <Navigation />
-      <HackathonDetail 
-        hackathon={hackathon} 
-        onBack={() => window.history.back()} 
-      />
-      <Footer />
-    </div>
+    <ThemeProvider defaultTheme="dark" storageKey="portfolio-theme">
+      <div className="min-h-screen bg-background" style={{ scrollBehavior: 'auto' }}>
+        <Navigation />
+        <HackathonDetail 
+          hackathon={hackathon} 
+          onBack={() => window.history.back()} 
+        />
+        <Footer />
+      </div>
+    </ThemeProvider>
   )
 }

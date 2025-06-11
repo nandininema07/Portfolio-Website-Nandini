@@ -1,11 +1,12 @@
-
 import { motion } from 'framer-motion'
 import { Mail, Phone, MapPin, Github, Linkedin, Twitter, Send } from 'lucide-react'
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import emailjs from '@emailjs/browser'
+import { toast } from 'sonner'
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -14,11 +15,42 @@ export function Contact() {
     subject: '',
     message: ''
   })
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
-  const handleSubmit = (e: React.FormEvent) => {
+  useEffect(() => {
+    // Initialize EmailJS with your public key
+    emailjs.init("XDmknR9ot1Sxtk-Se") // Replace with your actual public key
+  }, [])
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    console.log('Form submitted:', formData)
-    // Handle form submission here
+    setIsSubmitting(true)
+
+    try {
+      const result = await emailjs.send(
+        'service_1uk3qfs', // Replace with your service ID
+        'template_d9se6wj', // Replace with your template ID
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          to_email: 'nandininema07@gmail.com'
+        }
+      )
+
+      if (result.status === 200) {
+        toast.success('Message sent successfully!')
+        setFormData({ name: '', email: '', subject: '', message: '' })
+      } else {
+        throw new Error('Failed to send message')
+      }
+    } catch (error) {
+      console.error('Error sending email:', error)
+      toast.error('Failed to send message. Please try again.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -32,19 +64,13 @@ export function Contact() {
     {
       icon: Mail,
       label: "Email",
-      value: "hello@developer.com",
-      href: "mailto:hello@developer.com"
-    },
-    {
-      icon: Phone,
-      label: "Phone",
-      value: "+1 (555) 123-4567",
-      href: "tel:+15551234567"
+      value: "nandininema07@gmail.com",
+      href: "mailto:nandininema07@gmail.com"
     },
     {
       icon: MapPin,
       label: "Location",
-      value: "San Francisco, CA",
+      value: "Mumbai, Maharashtra, India",
       href: "#"
     }
   ]
@@ -53,21 +79,15 @@ export function Contact() {
     {
       icon: Github,
       label: "GitHub",
-      href: "https://github.com",
+      href: "https://github.com/nandininema07",
       color: "hover:text-gray-900 dark:hover:text-white"
     },
     {
       icon: Linkedin,
       label: "LinkedIn",
-      href: "https://linkedin.com",
+      href: "https://www.linkedin.com/in/nandini-nema-a6914528b/",
       color: "hover:text-blue-600"
     },
-    {
-      icon: Twitter,
-      label: "Twitter",
-      href: "https://twitter.com",
-      color: "hover:text-blue-400"
-    }
   ]
 
   return (
@@ -253,9 +273,22 @@ export function Contact() {
                     <Button
                       type="submit"
                       className="w-full bg-gradient-to-r from-primary to-accent hover:from-primary/80 hover:to-accent/80 text-white font-medium py-3 transition-all duration-300 hover:scale-105 glow"
+                      disabled={isSubmitting}
                     >
-                      <Send className="w-4 h-4 mr-2" />
-                      Send Message
+                      {isSubmitting ? (
+                        <span className="flex items-center justify-center">
+                          <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                          </svg>
+                          Sending...
+                        </span>
+                      ) : (
+                        <>
+                          <Send className="w-4 h-4 mr-2" />
+                          Send Message
+                        </>
+                      )}
                     </Button>
                   </motion.div>
                 </form>

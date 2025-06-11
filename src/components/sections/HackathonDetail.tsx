@@ -1,9 +1,9 @@
-
 import { motion } from 'framer-motion'
 import { ArrowLeft, Trophy, Users, Clock, Code, ExternalLink, Award, Calendar, MapPin } from 'lucide-react'
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
+import { useEffect, useState } from 'react'
 
 interface HackathonDetailProps {
   hackathon: {
@@ -19,6 +19,7 @@ interface HackathonDetailProps {
     links: {
       demo?: string
       github?: string
+      website?: string
     }
     detailedDescription: string
     challenges: string[]
@@ -29,11 +30,24 @@ interface HackathonDetailProps {
       time: string
       activity: string
     }>
+    images: string[]
   }
   onBack: () => void
 }
 
 export function HackathonDetail({ hackathon, onBack }: HackathonDetailProps) {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => 
+        prevIndex === hackathon.images.length - 1 ? 0 : prevIndex + 1
+      )
+    }, 3000) // Change image every 3 seconds
+
+    return () => clearInterval(interval)
+  }, [hackathon.images.length])
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/5 py-20">
       <div className="container mx-auto px-4 max-w-4xl">
@@ -68,12 +82,66 @@ export function HackathonDetail({ hackathon, onBack }: HackathonDetailProps) {
             </div>
           </div>
 
+          {/* Image Carousel */}
+          {hackathon.images && hackathon.images.length > 0 && (
+            <Card className="glass border-primary/20 mb-8 overflow-hidden">
+              <CardContent className="p-4">
+                <div className="grid grid-cols-3 gap-4">
+                  {hackathon.images.slice(0, 3).map((image, index) => (
+                    <div
+                      key={index}
+                      className="aspect-video"
+                    >
+                      <img
+                        src={image}
+                        alt={`Hackathon image ${index + 1}`}
+                        className="w-full h-full object-cover rounded-lg"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+          )}
+
           {/* Project Overview */}
           <Card className="glass border-primary/20 mb-8">
             <CardContent className="p-8">
               <h2 className="text-3xl font-bold mb-4 text-primary">{hackathon.project}</h2>
               <p className="text-lg text-muted-foreground mb-6">{hackathon.description}</p>
               <p className="text-foreground leading-relaxed">{hackathon.detailedDescription}</p>
+              {/* Links */}
+          <div className="flex flex-wrap gap-4 justify-center pt-6">
+            {hackathon.links.website && (
+              <Button 
+                className="bg-gradient-to-r from-primary to-accent hover:from-primary/80 hover:to-accent/80"
+                onClick={() => window.open(hackathon.links.website, '_blank')}
+              >
+                <ExternalLink className="w-4 h-4 mr-2" />
+                Live Website
+              </Button>
+            )}
+            {hackathon.links.github && (
+              <Button 
+                variant="outline" 
+                className="border-primary/30 hover:border-primary/60"
+                onClick={() => window.open(hackathon.links.github, '_blank')}
+              >
+                <Code className="w-4 h-4 mr-2" />
+                View Code
+              </Button>
+            )}
+            {hackathon.links.demo && (
+              <Button 
+                variant="outline" 
+                className="border-primary/30 hover:border-primary/60"
+                onClick={() => window.open(hackathon.links.demo, '_blank')}
+              >
+                <ExternalLink className="w-4 h-4 mr-2" />
+                Live Demo
+              </Button>
+            )}
+          </div>
             </CardContent>
           </Card>
 
@@ -191,22 +259,6 @@ export function HackathonDetail({ hackathon, onBack }: HackathonDetailProps) {
               </div>
             </CardContent>
           </Card>
-
-          {/* Links */}
-          <div className="flex flex-wrap gap-4 justify-center">
-            {hackathon.links.demo && (
-              <Button className="bg-gradient-to-r from-primary to-accent hover:from-primary/80 hover:to-accent/80">
-                <ExternalLink className="w-4 h-4 mr-2" />
-                Live Demo
-              </Button>
-            )}
-            {hackathon.links.github && (
-              <Button variant="outline" className="border-primary/30 hover:border-primary/60">
-                <Code className="w-4 h-4 mr-2" />
-                View Code
-              </Button>
-            )}
-          </div>
         </motion.div>
       </div>
     </div>

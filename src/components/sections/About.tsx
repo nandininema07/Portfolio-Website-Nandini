@@ -96,7 +96,7 @@ export function About() {
             </div>
             <div className="grid grid-cols-2 gap-4">
               {[
-                { number: "50+", label: "Projects Completed" },
+                { number: "15+", label: "Projects Completed" },
                 { number: "3+", label: "Years Experience" },
                 { number: "10+", label: "Hackathons" },
                 { number: "∞", label: "Lines of Code" }

@@ -1,27 +1,30 @@
-
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
 import { Button } from './ui/button'
 import { ThemeToggle } from './ThemeToggle'
+import { Link, useLocation } from 'react-router-dom'
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [activeSection, setActiveSection] = useState('hero')
+  const location = useLocation()
 
   const navItems = [
-    { id: 'hero', label: 'Home' },
-    { id: 'about', label: 'About' },
-    { id: 'skills', label: 'Skills' },
-    { id: 'education', label: 'Education' },
-    { id: 'experience', label: 'Experience' },
-    { id: 'hackathons', label: 'Hackathons' },
-    { id: 'projects', label: 'Projects' },
-    { id: 'contact', label: 'Contact' }
+    { id: 'hero', label: 'Home', path: '/' },
+    { id: 'about', label: 'About', path: '/#about' },
+    { id: 'skills', label: 'Skills', path: '/#skills' },
+    { id: 'education', label: 'Education', path: '/#education' },
+    { id: 'experience', label: 'Experience', path: '/#experience' },
+    { id: 'hackathons', label: 'Hackathons', path: '/#hackathons' },
+    { id: 'projects', label: 'Projects', path: '/#projects' },
+    { id: 'contact', label: 'Contact', path: '/#contact' }
   ]
 
   useEffect(() => {
     const handleScroll = () => {
+      if (location.pathname !== '/') return
+      
       const sections = navItems.map(item => document.getElementById(item.id))
       const scrollPosition = window.scrollY + 100
 
@@ -36,17 +39,23 @@ export function Navigation() {
 
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+  }, [location.pathname])
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId)
-    if (element) {
-      const offset = 80
-      const elementPosition = element.offsetTop - offset
-      window.scrollTo({
-        top: elementPosition,
-        behavior: 'smooth'
-      })
+  const handleNavigation = (path: string) => {
+    if (path === '/') {
+      window.location.href = '/'
+    } else if (location.pathname === '/') {
+      const element = document.getElementById(path.substring(2))
+      if (element) {
+        const offset = 80
+        const elementPosition = element.offsetTop - offset
+        window.scrollTo({
+          top: elementPosition,
+          behavior: 'smooth'
+        })
+      }
+    } else {
+      window.location.href = path
     }
     setIsOpen(false)
   }
@@ -64,7 +73,7 @@ export function Navigation() {
           <motion.div
             whileHover={{ scale: 1.05 }}
             className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent cursor-pointer"
-            onClick={() => scrollToSection('hero')}
+            onClick={() => handleNavigation('/')}
           >
             Nandini Nema
           </motion.div>
@@ -76,7 +85,7 @@ export function Navigation() {
                 key={item.id}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                onClick={() => scrollToSection(item.id)}
+                onClick={() => handleNavigation(item.path)}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                   activeSection === item.id
                     ? 'bg-gradient-to-r from-primary/20 to-accent/20 text-primary border border-primary/30'
@@ -120,7 +129,7 @@ export function Navigation() {
                 key={item.id}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                onClick={() => scrollToSection(item.id)}
+                onClick={() => handleNavigation(item.path)}
                 className={`block w-full text-left px-4 py-3 rounded-lg text-sm font-medium transition-all duration-300 ${
                   activeSection === item.id
                     ? 'bg-gradient-to-r from-primary/20 to-accent/20 text-primary border border-primary/30'

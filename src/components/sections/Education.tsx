@@ -6,24 +6,22 @@ import { Card, CardContent } from '@/components/ui/card'
 export function Education() {
   const education = [
     {
-      degree: "Bachelor of Technology in Computer Science",
-      institution: "ABC University",
-      duration: "2020 - 2024",
-      location: "New York, USA",
-      grade: "CGPA: 9.2/10",
-      highlights: ["Data Structures & Algorithms", "Machine Learning", "Web Development", "Software Engineering"],
-      achievement: "Magna Cum Laude",
+      degree: "Bachelor of Technology in Information Technology ; Honors in DevOps",
+      institution: "SVKM's Dwarkadas J. Sanghvi College of Engineering",
+      duration: "2023 - 2027",
+      location: "Mumbai, Maharashtra, India",
+      grade: "CGPA: 9.42/10",
+      highlights: ["Data Structures & Algorithms", "Machine Learning", "Web Development", "Database Management", "Operating Systems", "System Design", "Software Engineering"],
       color: "from-blue-500 to-purple-600",
       description: "Specialized in cutting-edge technologies with focus on AI and full-stack development"
     },
     {
-      degree: "High School Diploma",
-      institution: "XYZ International School",
-      duration: "2018 - 2020",
-      location: "California, USA",
-      grade: "95.8%",
+      degree: "High School",
+      institution: "St. John's Universal School",
+      duration: "2011 - 2021",
+      location: "Mumbai, Maharashtra, India",
+      grade: "97.8%",
       highlights: ["Mathematics", "Computer Science", "Physics", "English"],
-      achievement: "Valedictorian",
       color: "from-green-500 to-teal-600",
       description: "Foundation in STEM subjects with early programming experience"
     }
