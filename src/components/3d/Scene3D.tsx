@@ -1,28 +1,19 @@
-
-import { Canvas } from '@react-three/fiber'
-import { OrbitControls, Environment, Float } from '@react-three/drei'
-import { FloatingCube } from './FloatingCube'
+import Spline from '@splinetool/react-spline';
 
 export function Scene3D() {
   return (
-    <div className="w-full h-full">
-      <Canvas camera={{ position: [0, 0, 5], fov: 50 }}>
-        <ambientLight intensity={0.5} />
-        <pointLight position={[10, 10, 10]} intensity={1} color="#667eea" />
-        <pointLight position={[-10, -10, -10]} intensity={0.5} color="#764ba2" />
-        
-        <Float speed={2} rotationIntensity={1} floatIntensity={2}>
-          <FloatingCube />
-        </Float>
-        
-        <OrbitControls 
-          enableZoom={false} 
-          enablePan={false}
-          autoRotate
-          autoRotateSpeed={1}
-        />
-        <Environment preset="city" />
-      </Canvas>
+    <div className="w-full h-full relative">
+      <Spline 
+        scene="https://prod.spline.design/Q2HTz3sKq2ujDk8B/scene.splinecode"
+        style={{ 
+          width: '100%', 
+          height: '100%', 
+          position: 'absolute', 
+          top: 0, 
+          left: 0,
+          objectFit: 'cover'
+        }}
+      />
     </div>
-  )
+  );
 }

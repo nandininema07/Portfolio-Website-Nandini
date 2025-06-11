@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion'
 import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -14,7 +13,7 @@ export function Hero() {
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-r from-primary/5 to-accent/5 rounded-full blur-3xl animate-float"></div>
       </div>
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-16 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center min-h-screen py-20">
           {/* Left side - Content */}
           <motion.div
@@ -89,9 +88,9 @@ export function Hero() {
               className="flex gap-4"
             >
               {[
-                { icon: Github, href: '#' },
-                { icon: Linkedin, href: '#' },
-                { icon: Mail, href: '#' }
+                { icon: Github, href: 'https://github.com/nandininema07' },
+                { icon: Linkedin, href: 'https://www.linkedin.com/in/nandini-nema-a6914528b/' },
+                { icon: Mail, href: 'mailto:nandininema07@gmail.com' }
               ].map((social, index) => (
                 <motion.a
                   key={index}
@@ -111,7 +110,7 @@ export function Hero() {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative h-[400px] md:h-[600px] rounded-2xl overflow-hidden"
+            className="relative h-[300px] md:h-[450px] w-full rounded-2xl overflow-hidden"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl backdrop-blur-sm border border-primary/20">
               <Scene3D />

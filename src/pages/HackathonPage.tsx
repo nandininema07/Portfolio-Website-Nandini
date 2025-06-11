@@ -1,5 +1,5 @@
-
 import { useParams, Navigate } from 'react-router-dom'
+import { useEffect } from 'react'
 import { Navigation } from '@/components/Navigation'
 import { Footer } from '@/components/sections/Footer'
 import { HackathonDetail } from '@/components/sections/HackathonDetail'
@@ -7,6 +7,10 @@ import { HackathonDetail } from '@/components/sections/HackathonDetail'
 export default function HackathonPage() {
   const { id } = useParams<{ id: string }>()
   
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [id]) // Re-run when id changes to handle different hackathon pages
+
   const hackathons = [
     {
       name: "Global AI Challenge 2024",
@@ -165,7 +169,7 @@ export default function HackathonPage() {
   }
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background" style={{ scrollBehavior: 'auto' }}>
       <Navigation />
       <HackathonDetail 
         hackathon={hackathon} 
