@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion'
 import { GraduationCap, Calendar, MapPin, Award, BookOpen, Star, Trophy } from 'lucide-react'
 import { Card, CardContent } from '@/components/ui/card'
@@ -13,7 +12,8 @@ export function Education() {
       grade: "CGPA: 9.42/10",
       highlights: ["Data Structures & Algorithms", "Machine Learning", "Web Development", "Database Management", "Operating Systems", "System Design", "Software Engineering"],
       color: "from-blue-500 to-purple-600",
-      description: "Specialized in cutting-edge technologies with focus on AI and full-stack development"
+      description: "Specialized in cutting-edge technologies with focus on AI and full-stack development",
+      logo: "/DJSCE_Logo.png"
     },
     {
       degree: "High School",
@@ -23,16 +23,27 @@ export function Education() {
       grade: "97.8%",
       highlights: ["Mathematics", "Computer Science", "Physics", "English"],
       color: "from-green-500 to-teal-600",
-      description: "Foundation in STEM subjects with early programming experience"
+      description: "Foundation in STEM subjects with early programming experience",
+      logo: "/Universal.jpeg"
     }
   ]
 
   const certifications = [
-    { name: "AWS Certified Solutions Architect", icon: "🏗️", level: "Professional" },
-    { name: "Google Cloud Professional Developer", icon: "☁️", level: "Professional" },
-    { name: "Microsoft Azure AI Engineer", icon: "🤖", level: "Associate" },
-    { name: "Meta React Specialist", icon: "⚛️", level: "Specialist" },
-    { name: "TensorFlow Developer Certificate", icon: "🧠", level: "Certified" }
+    { 
+      name: "IBM Generative AI Engineer", 
+      logo: "/ibm-logo.jpg",
+      level: "Professional" 
+    },
+    { 
+      name: "Udemy Full Stack Web Developer", 
+      logo: "/udemy.jpg",
+      level: "Professional" 
+    },
+    { 
+      name: "Udemy UI/UX Mastery", 
+      logo: "/udemy.jpg",
+      level: "Professional" 
+    }
   ]
 
   return (
@@ -75,8 +86,16 @@ export function Education() {
                 <div className={`absolute inset-0 bg-gradient-to-br ${edu.color} opacity-5 group-hover:opacity-10 transition-opacity duration-500`}></div>
                 <CardContent className="p-6 relative z-10">
                   <div className="flex items-start gap-4 mb-6">
-                    <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${edu.color} opacity-20 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300`}>
-                      <GraduationCap className="w-8 h-8 text-primary" />
+                    <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${edu.color} opacity-100 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 overflow-hidden`}>
+                      {edu.logo ? (
+                        <img 
+                          src={edu.logo} 
+                          alt={`${edu.institution} logo`}
+                          className="w-full h-full object-contain p-2"
+                        />
+                      ) : (
+                        <GraduationCap className="w-8 h-8 text-primary" />
+                      )}
                     </div>
                     <div className="flex-1">
                       <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors duration-300">{edu.degree}</h3>
@@ -149,8 +168,12 @@ export function Education() {
                 whileHover={{ scale: 1.05, rotateY: 5 }}
                 className="p-6 rounded-2xl bg-gradient-to-br from-primary/10 to-accent/10 border border-primary/20 hover:border-primary/40 transition-all duration-300 cursor-pointer text-center group"
               >
-                <div className="text-4xl mb-3 group-hover:scale-110 transition-transform duration-300">
-                  {cert.icon}
+                <div className="w-16 h-16 mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
+                  <img 
+                    src={cert.logo} 
+                    alt={`${cert.name} logo`}
+                    className="w-full h-full object-contain"
+                  />
                 </div>
                 <h4 className="font-semibold text-sm mb-2 group-hover:text-primary transition-colors duration-300">
                   {cert.name}

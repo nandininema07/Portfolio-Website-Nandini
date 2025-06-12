@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion'
 import { Building, Calendar, MapPin, ChevronRight } from 'lucide-react'
 import { Card, CardContent } from '@/components/ui/card'
@@ -18,7 +17,8 @@ export function Experience() {
         "Collaborated with a team of 5 developers on multiple high-impact projects", 
         "Architected microservices infrastructure serving 1M+ users"
       ],
-      technologies: ["React", "Node.js", "Django", "Python", "Flask", "Firebase"]
+      technologies: ["React", "Node.js", "Django", "Python", "Flask", "Firebase"],
+      logo: "/IIT Bombay Logo.jpg"
     },
     {
       title: "Frontend Developer Intern",
@@ -33,7 +33,8 @@ export function Experience() {
         "Actively involved in the development phase in a startup environment",
         "Collaborated with design team to improve UX metrics by 35%"
       ],
-      technologies: ["React", "Node.js", "Express", "MongoDB", "Bootstrap"]
+      technologies: ["React", "Node.js", "Express", "MongoDB", "Bootstrap"],
+      logo: "/Plasmid Logo.jpeg"
     }
   ]
 
@@ -81,8 +82,16 @@ export function Experience() {
                       <div className="w-3 h-3 rounded-full bg-background"></div>
                     </div>
 
-                    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center flex-shrink-0">
-                      <Building className="w-8 h-8 text-primary" />
+                    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center flex-shrink-0 overflow-hidden">
+                      {exp.logo ? (
+                        <img 
+                          src={exp.logo} 
+                          alt={`${exp.company} logo`}
+                          className="w-full h-full object-contain p-2"
+                        />
+                      ) : (
+                        <Building className="w-8 h-8 text-primary" />
+                      )}
                     </div>
 
                     <div className="flex-1">

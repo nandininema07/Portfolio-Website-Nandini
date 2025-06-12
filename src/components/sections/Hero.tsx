@@ -69,13 +69,19 @@ export function Hero() {
               <Button 
                 size="lg" 
                 className="bg-gradient-to-r from-primary to-accent hover:from-primary/80 hover:to-accent/80 text-white font-medium px-8 py-3 rounded-full transition-all duration-300 hover:scale-105"
+                asChild
               >
-                View My Work
+                <a href="/Nandini Nema Resume.pdf" target="_blank" rel="noopener noreferrer">
+                  View My Resume
+                </a>
               </Button>
               <Button 
                 variant="outline" 
                 size="lg"
                 className="border-primary/30 hover:border-primary/60 backdrop-blur-sm px-8 py-3 rounded-full transition-all duration-300 hover:scale-105"
+                onClick={() => {
+                  document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                }}
               >
                 Get In Touch
               </Button>

@@ -99,67 +99,6 @@ export function Skills() {
             </motion.div>
           ))}
         </div>
-
-        {/* Skill proficiency visualization */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          viewport={{ once: true }}
-          className="mt-16 glass rounded-2xl p-8 border border-primary/20"
-        >
-          <h3 className="text-2xl font-bold text-center mb-8">Proficiency Levels</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { skill: "React/Next.js", level: 95 },
-              { skill: "Node.js", level: 90 },
-              { skill: "AI/ML", level: 85 },
-              { skill: "UI/UX Design", level: 88 }
-            ].map((item, index) => (
-              <div key={item.skill} className="text-center">
-                <div className="text-lg font-semibold mb-2">{item.skill}</div>
-                <div className="relative w-24 h-24 mx-auto">
-                  <svg className="w-24 h-24 transform -rotate-90" viewBox="0 0 100 100">
-                    <circle
-                      cx="50"
-                      cy="50"
-                      r="45"
-                      stroke="currentColor"
-                      strokeWidth="8"
-                      fill="transparent"
-                      className="text-muted-foreground/20"
-                    />
-                    <motion.circle
-                      cx="50"
-                      cy="50"
-                      r="45"
-                      stroke="url(#gradient)"
-                      strokeWidth="8"
-                      fill="transparent"
-                      strokeLinecap="round"
-                      strokeDasharray={`${2 * Math.PI * 45}`}
-                      initial={{ strokeDashoffset: 2 * Math.PI * 45 }}
-                      whileInView={{ 
-                        strokeDashoffset: 2 * Math.PI * 45 * (1 - item.level / 100)
-                      }}
-                      transition={{ duration: 1.5, delay: index * 0.2 }}
-                      viewport={{ once: true }}
-                    />
-                    <defs>
-                      <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" stopColor="hsl(var(--primary))" />
-                        <stop offset="100%" stopColor="hsl(var(--accent))" />
-                      </linearGradient>
-                    </defs>
-                  </svg>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="text-xl font-bold">{item.level}%</span>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </motion.div>
       </div>
     </section>
   )
