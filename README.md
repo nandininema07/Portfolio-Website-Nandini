@@ -28,7 +28,7 @@ This repository contains my personal portfolio website built with:
 - Contact form
 
 ### Live Demo
-Visit my portfolio at: [nandininema.vercel.app](https://nandininema.vercel.app)
+Visit my portfolio at: [nandininema.vercel.app](https://portfolio-website-nandini.vercel.app/)
 
 ## 🛠️ Skills
 
