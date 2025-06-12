@@ -1,4 +1,3 @@
-
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { ExternalLink, Github, Play } from 'lucide-react'
@@ -9,83 +8,80 @@ import { Badge } from '@/components/ui/badge'
 export function Projects() {
   const projects = [
     {
-      title: "AI-Powered E-Commerce Platform",
-      description: "Full-stack e-commerce platform with AI-driven product recommendations, real-time chat support, and advanced analytics dashboard.",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80",
+      title: "AgentFlow - Agentic AI Marketplace",
+      description: "Agentic AI Platform for Streamlined Agent Development",
+      image: "/D2K 3.jpeg",
       category: "Full Stack",
-      technologies: ["Next.js", "Node.js", "MongoDB", "TensorFlow", "Redis", "Stripe"],
-      features: ["AI Recommendations", "Real-time Chat", "Payment Integration", "Admin Dashboard"],
+      technologies: ["Next.js", "React Flow","SQLAlchemy","HuggingFace","FastAPI", "Python", "Axios"],
+      features: ["AI Agent Marketplace", "Real-time Chat", "No-code Agent Development", "Agent Dashboard"],
       status: "Live",
       links: {
-        live: "#",
-        github: "#",
-        demo: "#"
+        demo: "https://www.youtube.com/watch?v=9vzwt6VrFLQ"
       }
     },
     {
-      title: "Smart Health Monitoring App",
-      description: "Mobile application that uses computer vision and ML to monitor health vitals through camera and provide personalized health insights.",
-      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?auto=format&fit=crop&w=800&q=80",
-      category: "Mobile & AI",
-      technologies: ["React Native", "Python", "OpenCV", "Firebase", "TensorFlow Lite"],
-      features: ["Vital Monitoring", "Health Analytics", "Offline Support", "Data Sync"],
+      title: "DDoS Shield",
+      description: "DDoS Detection and Mitigation System in Real-time using Machine Learning",
+      image: "/DDoS1.jpg",
+      category: ["Cyber Security","AI/ML"],
+      technologies: ["Python", "TensorFlow Lite", "CICFlowMeter"],
+      features: ["DDoS Detection", "Real-time Mitigation", "Machine Learning", "CICFlowMeter"],
       status: "Development",
       links: {
-        github: "#",
-        demo: "#"
+        github: "https://github.com/nandininema07/DDoS-Detection-and-Analysis-using-ML",
+        demo: "https://youtu.be/Pbu9E7b5f_M"
       }
     },
     {
-      title: "Blockchain Voting System",
-      description: "Secure and transparent voting platform built on Ethereum blockchain with smart contracts ensuring vote integrity and anonymity.",
-      image: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=800&q=80",
-      category: "Blockchain",
-      technologies: ["Solidity", "Web3.js", "React", "Ethereum", "IPFS", "MetaMask"],
-      features: ["Smart Contracts", "Vote Verification", "Anonymous Voting", "Real-time Results"],
+      title: "Fambot - AI Powered Home Assistance Robot",
+      description: "Fambot is a home assistance robot that uses AI to help you with your daily tasks.",
+      image: "/Frontend Arena 3.jpeg",
+      category: "Website Development",
+      technologies: ["Next.js","TypeScript", "Spline", "Three.js", "Framer Motion", "Tailwind CSS"],
+      features: ["AI Powered Home Assistance", "Real-time Results"],
       status: "Live",
       links: {
-        live: "#",
-        github: "#"
+        live: "https://react-masters-fambot.vercel.app/",
+        github: "https://github.com/nandininema07/React-Masters"
       }
     },
     {
-      title: "Neural Style Transfer Web App",
-      description: "Web application that applies artistic styles to images using deep learning neural networks with real-time processing.",
-      image: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?auto=format&fit=crop&w=800&q=80",
+      title: "Arogyam - Machine Learning Ayurveda Recommendation System",
+      description: "Arogyam is an AI-powered Ayurveda recommendation system that can recommend Ayurvedic remedies for various diseases.",
+      image: "/Devquest 2.jpeg",
       category: "AI/ML",
       technologies: ["Python", "TensorFlow", "FastAPI", "React", "AWS", "Docker"],
-      features: ["Style Transfer", "Batch Processing", "Cloud Storage", "API Integration"],
+      features: ["Ayurveda Recommendation System", "Real-time Results", "Connects Doctors with Patients", "API Integration"],
       status: "Live",
       links: {
-        live: "#",
-        github: "#",
-        demo: "#"
+        github: "https://github.com/nandininema07/Innovatrix-DevQuest ",
+        demo: "https://youtu.be/-NLv9LkT9CI"
       }
     },
     {
-      title: "Real-time Collaboration Tool",
-      description: "Web-based collaboration platform with real-time document editing, video calls, and project management features.",
-      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80",
-      category: "Full Stack",
-      technologies: ["React", "Socket.io", "Node.js", "PostgreSQL", "WebRTC", "Redux"],
-      features: ["Real-time Editing", "Video Calls", "Task Management", "File Sharing"],
-      status: "Beta",
+      title: "ChillSlots - Game and Arcade Booking Website",
+      description: "ChillSlots is a comprehensive digital platform that simplifies and streamlines the process of booking gaming and sports activities.",
+      image: "/Chillslots.jpg",
+      category: "Website Development",
+      technologies: ["HTML", "CSS", "JavaScript", "MongoDB"],
+      features: ["Real-time Avalability", "Booking System", "Payment Integration", "User Authentication"],
+      status: "Live",
       links: {
-        live: "#",
-        github: "#"
+        demo: "#",
+        github: "https://github.com/nandininema07/CHILLSLOTS"
       }
     },
     {
-      title: "AR Product Visualizer",
-      description: "Augmented reality mobile app that allows users to visualize furniture and products in their real environment before purchase.",
-      image: "https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&fit=crop&w=800&q=80",
-      category: "AR/VR",
-      technologies: ["Unity", "ARCore", "C#", "Blender", "Firebase", "Android"],
-      features: ["3D Visualization", "Room Scanning", "Product Catalog", "Social Sharing"],
-      status: "Development",
+      title: "SeismoTrack - Seismic Tracking System for Celestial Bodies",
+      description: "SeismoTrack is a machine learning pipeline that analyzes seismic data from multiple celestial bodies to detect, track, filter and transmit seismic events.",
+      image: "/NASA 1.png",
+      category: "AI/ML",
+      technologies: ["Scikit-learn", "SciPy", "Flask", "NASA APIs", "D3.js", "Python"],
+      features: ["Seismic Event Detection", "Real-time Tracking", "Data Filtering", "Data Transmission"],
+      status: "Live",
       links: {
-        github: "#",
-        demo: "#"
+        github: "https://github.com/AAGAM17/sesimotrack",
+        demo: "https://youtu.be/ZMeOc4oTTZ0"
       }
     }
   ]
@@ -232,9 +228,12 @@ export function Projects() {
                       <Button
                         size="sm"
                         className="flex-1 bg-gradient-to-r from-primary/80 to-accent/80 hover:from-primary hover:to-accent transition-all duration-300"
+                        asChild
                       >
-                        <ExternalLink className="w-4 h-4 mr-2" />
-                        Live
+                        <a href={project.links.live} target="_blank" rel="noopener noreferrer">
+                          <ExternalLink className="w-4 h-4 mr-2" />
+                          Live
+                        </a>
                       </Button>
                     )}
                     {project.links.github && (
@@ -242,9 +241,12 @@ export function Projects() {
                         size="sm"
                         variant="outline"
                         className="flex-1 border-primary/30 hover:border-primary/60 transition-all duration-300"
+                        asChild
                       >
-                        <Github className="w-4 h-4 mr-2" />
-                        Code
+                        <a href={project.links.github} target="_blank" rel="noopener noreferrer">
+                          <Github className="w-4 h-4 mr-2" />
+                          Code
+                        </a>
                       </Button>
                     )}
                     {project.links.demo && (
@@ -252,9 +254,12 @@ export function Projects() {
                         size="sm"
                         variant="outline"
                         className="flex-1 border-primary/30 hover:border-primary/60 transition-all duration-300"
+                        asChild
                       >
-                        <Play className="w-4 h-4 mr-2" />
-                        Demo
+                        <a href={project.links.demo} target="_blank" rel="noopener noreferrer">
+                          <Play className="w-4 h-4 mr-2" />
+                          Demo
+                        </a>
                       </Button>
                     )}
                   </div>

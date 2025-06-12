@@ -107,7 +107,7 @@ export default function HackathonPage() {
       technologies: ["React", "OpenCV", "Flask", "Node.js","Mongoose"],
       achievements: ["Most Innovative Use of AI", "Networking with developers across India"],
       links: {
-        demo: "https://drive.google.com/file/d/1yu2rLFBEQvDPrws_2Sejh485M0FP2nlp/view?usp=sharing",
+        demo: "https://youtu.be/-NLv9LkT9CI",
         github: "https://github.com/nandininema07/Innovatrix-DevQuest"
       },
       detailedDescription: "Arogyam is an AI-powered wellness platform that analyzes facial features and nails to assess a user's Ayurvedic dosha (Vata, Pitta, or Kapha). Users upload or record a short video, and based on visual cues, the system offers personalized health and lifestyle recommendations. Verified by Ayurvedic experts and delivered via WhatsApp, Arogyam also helps practitioners track patient symptoms over time through interactive charts—making holistic health simple, smart, and accessible.",
@@ -149,7 +149,7 @@ export default function HackathonPage() {
       technologies: ["Scikit-learn", "SciPy", "Flask", "NASA APIs", "D3.js", "Python"],
       achievements: ["NASA recognition", "Featured on Space Apps website", "Mentorship from industry experts"],
       links: {
-        demo: "https://drive.google.com/file/d/1xxclNNm0j-GZ2BTEgpB1xp2_UAfmpjGc/view?usp=sharing",
+        demo: "https://youtu.be/ZMeOc4oTTZ0",
         github: "https://github.com/AAGAM17/sesimotrack"
       },
       detailedDescription: "SeismoTrack is a machine learning pipeline that analyzes seismic data from multiple celestial bodies to detect and track seismic events. It uses advanced machine learning techniques to filter and analyze data, and provides real-time updates on seismic activity across the solar system.",
