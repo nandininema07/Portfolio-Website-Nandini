@@ -67,7 +67,7 @@ export function Projects() {
       features: ["Real-time Avalability", "Booking System", "Payment Integration", "User Authentication"],
       status: "Live",
       links: {
-        demo: "#",
+        demo: "https://youtu.be/En9ncngWQ-0",
         github: "https://github.com/nandininema07/CHILLSLOTS"
       }
     },
