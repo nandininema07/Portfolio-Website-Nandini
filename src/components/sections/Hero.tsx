@@ -95,7 +95,7 @@ export function Hero() {
             >
               {[
                 { icon: Github, href: 'https://github.com/nandininema07' },
-                { icon: Linkedin, href: 'https://www.linkedin.com/in/nandini-nema-a6914528b/' },
+                { icon: Linkedin, href: 'https://www.linkedin.com/in/nandininema/' },
                 { icon: Mail, href: 'mailto:nandininema07@gmail.com' }
               ].map((social, index) => (
                 <motion.a

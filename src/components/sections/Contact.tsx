@@ -85,7 +85,7 @@ export function Contact() {
     {
       icon: Linkedin,
       label: "LinkedIn",
-      href: "https://www.linkedin.com/in/nandini-nema-a6914528b/",
+      href: "https://www.linkedin.com/in/nandininema/",
       color: "hover:text-blue-600"
     },
   ]
