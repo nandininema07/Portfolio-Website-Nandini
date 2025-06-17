@@ -7,7 +7,7 @@ export function Experience() {
     {
       title: "Full Stack Developer Intern",
       company: "Indian Institute of Technology, Bombay",
-      duration: "January 2025 - Present",
+      duration: "January 2025 - June 2025",
       location: "Mumbai, Maharashtra, India",
       type: "Internship",
       description: "Leading development of scalable web applications and AI-powered features for enterprise clients.",
