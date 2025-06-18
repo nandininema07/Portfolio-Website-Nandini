@@ -11,7 +11,7 @@ export function Projects() {
       title: "AgentFlow - Agentic AI Marketplace",
       description: "Agentic AI Platform for Streamlined Agent Development",
       image: "/D2K 3.jpeg",
-      category: "Full Stack",
+      category: ["Full Stack", "AI/ML"],
       technologies: ["Next.js", "React Flow","SQLAlchemy","HuggingFace","FastAPI", "Python", "Axios"],
       features: ["AI Agent Marketplace", "Real-time Chat", "No-code Agent Development", "Agent Dashboard"],
       status: "Live",
@@ -36,7 +36,7 @@ export function Projects() {
       title: "Fambot - AI Powered Home Assistance Robot",
       description: "Fambot is a home assistance robot that uses AI to help you with your daily tasks.",
       image: "/Frontend Arena 3.jpeg",
-      category: "Website Development",
+      category: ["Website Development"],
       technologies: ["Next.js","TypeScript", "Spline", "Three.js", "Framer Motion", "Tailwind CSS"],
       features: ["AI Powered Home Assistance", "Real-time Results"],
       status: "Live",
@@ -49,7 +49,7 @@ export function Projects() {
       title: "Arogyam - Machine Learning Ayurveda Recommendation System",
       description: "Arogyam is an AI-powered Ayurveda recommendation system that can recommend Ayurvedic remedies for various diseases.",
       image: "/Devquest 2.jpeg",
-      category: "AI/ML",
+      category: ["AI/ML", "Full Stack"],
       technologies: ["Python", "TensorFlow", "FastAPI", "React", "AWS", "Docker"],
       features: ["Ayurveda Recommendation System", "Real-time Results", "Connects Doctors with Patients", "API Integration"],
       status: "Live",
@@ -62,7 +62,7 @@ export function Projects() {
       title: "ChillSlots - Game and Arcade Booking Website",
       description: "ChillSlots is a comprehensive digital platform that simplifies and streamlines the process of booking gaming and sports activities.",
       image: "/Chillslots.jpg",
-      category: "Website Development",
+      category: ["Website Development"],
       technologies: ["HTML", "CSS", "JavaScript", "MongoDB"],
       features: ["Real-time Avalability", "Booking System", "Payment Integration", "User Authentication"],
       status: "Live",
@@ -75,7 +75,7 @@ export function Projects() {
       title: "SeismoTrack - Seismic Tracking System for Celestial Bodies",
       description: "SeismoTrack is a machine learning pipeline that analyzes seismic data from multiple celestial bodies to detect, track, filter and transmit seismic events.",
       image: "/NASA 1.png",
-      category: "AI/ML",
+      category: ["AI/ML", "Data Science"],
       technologies: ["Scikit-learn", "SciPy", "Flask", "NASA APIs", "D3.js", "Python"],
       features: ["Seismic Event Detection", "Real-time Tracking", "Data Filtering", "Data Transmission"],
       status: "Live",
@@ -86,12 +86,16 @@ export function Projects() {
     }
   ]
 
-  const categories = ["All", "Full Stack", "AI/ML", "Mobile & AI", "Blockchain", "AR/VR"]
+  const categories = ["All", "Full Stack", "AI/ML", "Website Development", "Cyber Security", "Data Science"]
   const [selectedCategory, setSelectedCategory] = useState("All")
 
   const filteredProjects = selectedCategory === "All" 
     ? projects 
-    : projects.filter(project => project.category === selectedCategory)
+    : projects.filter(project => 
+        Array.isArray(project.category) 
+          ? project.category.includes(selectedCategory)
+          : project.category === selectedCategory
+      )
 
   return (
     <section id="projects" className="py-20 relative overflow-hidden bg-gradient-to-b from-background to-primary/5">
@@ -158,13 +162,25 @@ export function Projects() {
                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                  <div className="absolute top-4 left-4">
-                    <Badge 
-                      variant="secondary" 
-                      className="bg-background/80 backdrop-blur-sm"
-                    >
-                      {project.category}
-                    </Badge>
+                  <div className="absolute top-4 left-4 flex flex-wrap gap-1">
+                    {Array.isArray(project.category) ? (
+                      project.category.map((cat, index) => (
+                        <Badge 
+                          key={index}
+                          variant="secondary" 
+                          className="bg-background/80 backdrop-blur-sm text-xs"
+                        >
+                          {cat}
+                        </Badge>
+                      ))
+                    ) : (
+                      <Badge 
+                        variant="secondary" 
+                        className="bg-background/80 backdrop-blur-sm"
+                      >
+                        {project.category}
+                      </Badge>
+                    )}
                   </div>
                   <div className="absolute top-4 right-4">
                     <Badge 

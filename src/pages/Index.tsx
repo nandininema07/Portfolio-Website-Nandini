@@ -1,4 +1,3 @@
-
 import { useState } from 'react'
 import { ThemeProvider } from '@/components/ThemeProvider'
 import { Navigation } from '@/components/Navigation'
@@ -14,7 +13,7 @@ import { Footer } from '@/components/sections/Footer'
 
 const Index = () => {
   return (
-    <ThemeProvider defaultTheme="dark" storageKey="portfolio-theme">
+    <ThemeProvider defaultTheme="light" storageKey="portfolio-theme">
       <div className="min-h-screen bg-background">
         <Navigation />
         

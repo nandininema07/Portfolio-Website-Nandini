@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion'
 import { Heart, Code, Coffee } from 'lucide-react'
 
@@ -21,18 +20,23 @@ export function Footer() {
             >
               <Heart className="w-4 h-4 text-red-500 fill-current" />
             </motion.div>
-            <span>,</span>
-            <Code className="w-4 h-4 text-primary" />
-            <span>and lots of</span>
-            <Coffee className="w-4 h-4 text-amber-600" />
+            <span> by </span>
+            <a
+              href="https://www.linkedin.com/in/nandininema/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:text-accent transition-colors duration-300 font-medium hover:underline"
+            >
+              Nandini Nema
+            </a>
           </div>
           
           <p className="text-sm text-muted-foreground mb-2">
-            © 2024 Portfolio. All rights reserved.
+            © 2025 Nandini Nema. All rights reserved.
           </p>
           
           <p className="text-xs text-muted-foreground">
-            Built with React, TypeScript, Tailwind CSS, and Three.js
+            Built with React, TypeScript, Tailwind CSS, and Spline
           </p>
         </motion.div>
       </div>

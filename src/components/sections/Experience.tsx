@@ -17,7 +17,7 @@ export function Experience() {
         "Collaborated with a team of 5 developers on multiple high-impact projects", 
         "Architected microservices infrastructure serving 1M+ users"
       ],
-      technologies: ["React", "Node.js", "Django", "Python", "Flask", "Firebase"],
+      technologies: ["React", "Node.js", "Django", "Python", "Flask", "Firebase", "Figma"],
       logo: "/IIT Bombay Logo.jpg"
     },
     {
@@ -71,14 +71,14 @@ export function Experience() {
             >
               {/* Timeline line */}
               {index < experiences.length - 1 && (
-                <div className="absolute left-6 top-16 w-0.5 h-full bg-gradient-to-b from-primary to-accent opacity-30"></div>
+                <div className="absolute left-6 top-16 w-0.5 h-full bg-gradient-to-b from-primary to-accent opacity-30 hidden md:block"></div>
               )}
               
-              <Card className="glass border-primary/20 hover:border-primary/40 transition-all duration-300 hover:scale-[1.02] ml-16">
+              <Card className="glass border-primary/20 hover:border-primary/40 transition-all duration-300 hover:scale-[1.02] md:ml-16">
                 <CardContent className="p-8">
                   <div className="flex items-start gap-6">
                     {/* Timeline dot */}
-                    <div className="absolute -left-3 top-8 w-6 h-6 rounded-full bg-gradient-to-r from-primary to-accent flex items-center justify-center">
+                    <div className="absolute -left-3 top-8 w-6 h-6 rounded-full bg-gradient-to-r from-primary to-accent flex items-center justify-center hidden md:flex">
                       <div className="w-3 h-3 rounded-full bg-background"></div>
                     </div>
 
@@ -118,11 +118,11 @@ export function Experience() {
                         </div>
                       </div>
 
-                      <p className="text-muted-foreground mb-6">{exp.description}</p>
+                      <p className="text-muted-foreground mb-4 md:mb-6">{exp.description}</p>
 
-                      <div className="mb-6">
-                        <h4 className="font-semibold mb-3">Key Achievements:</h4>
-                        <ul className="space-y-2">
+                      <div className="mb-4 md:mb-6">
+                        <h4 className="font-semibold mb-2 md:mb-3">Key Achievements:</h4>
+                        <ul className="space-y-1 md:space-y-2">
                           {exp.achievements.map((achievement, achIndex) => (
                             <motion.li
                               key={achIndex}
@@ -140,7 +140,7 @@ export function Experience() {
                       </div>
 
                       <div>
-                        <h4 className="font-semibold mb-3">Technologies Used:</h4>
+                        <h4 className="font-semibold mb-2 md:mb-3">Technologies Used:</h4>
                         <div className="flex flex-wrap gap-2">
                           {exp.technologies.map((tech, techIndex) => (
                             <motion.span
