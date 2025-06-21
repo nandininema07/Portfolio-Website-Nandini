@@ -13,7 +13,7 @@ export function Education() {
       institution: "SVKM's Dwarkadas J. Sanghvi College of Engineering",
       duration: "2023 - 2027",
       location: "Mumbai, Maharashtra, India",
-      grade: "CGPA: 9.42/10",
+      grade: "CGPA: 9.45/10",
       highlights: ["Data Structures & Algorithms", "Machine Learning", "Web Development", "Database Management", "Operating Systems", "System Design", "Software Engineering"],
       color: "from-blue-500 to-purple-600",
       description: "Specialized in cutting-edge technologies with focus on AI and full-stack development",
