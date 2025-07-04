@@ -5,6 +5,7 @@ import { Hero } from '@/components/sections/Hero'
 import { About } from '@/components/sections/About'
 import { Skills } from '@/components/sections/Skills'
 import { Education } from '@/components/sections/Education'
+import { Certifications } from '@/components/sections/Certifications'
 import { Experience } from '@/components/sections/Experience'
 import { Hackathons } from '@/components/sections/Hackathons'
 import { Projects } from '@/components/sections/Projects'
@@ -33,7 +34,11 @@ const Index = () => {
           <section id="education">
             <Education />
           </section>
-          
+
+          <section id="certifications">
+            <Certifications />
+          </section>
+
           <section id="experience">
             <Experience />
           </section>

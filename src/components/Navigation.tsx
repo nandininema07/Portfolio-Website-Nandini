@@ -15,6 +15,7 @@ export function Navigation() {
     { id: 'about', label: 'About', path: '/#about' },
     { id: 'skills', label: 'Skills', path: '/#skills' },
     { id: 'education', label: 'Education', path: '/#education' },
+    { id: 'certifications', label: 'Certifications', path: '/#certifications' },
     { id: 'experience', label: 'Experience', path: '/#experience' },
     { id: 'hackathons', label: 'Hackathons', path: '/#hackathons' },
     { id: 'projects', label: 'Projects', path: '/#projects' },
