@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react'
+import { SiMedium } from 'react-icons/si' // Add this import
 import { Button } from '@/components/ui/button'
 import { Scene3D } from '../3d/Scene3D'
 
@@ -93,10 +94,20 @@ export function Hero() {
               transition={{ delay: 1, duration: 0.6 }}
               className="flex gap-4"
             >
-              {[
+              {/*
                 { icon: Github, href: 'https://github.com/nandininema07' },
                 { icon: Linkedin, href: 'https://www.linkedin.com/in/nandininema/' },
+                { icon: Mail, href: 'mailto:nandininema07@gmail.com' },
+              */}
+              {/*
+                { icon: SiMedium, href: 'https://medium.com/@nandininema07' } // Add Medium
+              */}
+              { [
+                { icon: Github, href: 'https://github.com/nandininema07' },
+                { icon: Linkedin, href: 'https://www.linkedin.com/in/nandininema/' },
+                { icon: SiMedium, href: 'https://medium.com/@nandininema07' },   // Add Medium
                 { icon: Mail, href: 'mailto:nandininema07@gmail.com' }
+                
               ].map((social, index) => (
                 <motion.a
                   key={index}

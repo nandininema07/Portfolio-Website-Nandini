@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { Mail, Phone, MapPin, Github, Linkedin, Twitter, Send } from 'lucide-react'
+import { SiMedium } from 'react-icons/si' // Add this import
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -87,6 +88,12 @@ export function Contact() {
       label: "LinkedIn",
       href: "https://www.linkedin.com/in/nandininema/",
       color: "hover:text-blue-600"
+    },
+    {
+      icon: SiMedium,
+      label: "Medium",
+      href: "https://medium.com/@nandininema07",
+      color: "hover:text-black"
     },
   ]
 
