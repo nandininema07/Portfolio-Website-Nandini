@@ -8,7 +8,7 @@ import {
   SiFlutter, SiExpo, SiSqlite,
   SiAdobexd, SiAdobephotoshop, SiAdobeillustrator,
   SiCplusplus, SiJavascript, SiHtml5, SiCss3, SiMysql,
-  SiBootstrap, SiGithub
+  SiBootstrap, SiGithub, SiGoogle
 } from 'react-icons/si'
 import { FaBrain, FaJava, FaEthereum, FaCube } from 'react-icons/fa'
 import { BiNetworkChart } from 'react-icons/bi'
@@ -50,12 +50,17 @@ export function Skills() {
     {
       title: "AI/ML",
       skills: [
-        { name: "TensorFlow", icon: SiTensorflow, color: "#FF6F00" },
-        { name: "PyTorch", icon: SiPytorch, color: "#EE4C2C" },
-        { name: "OpenAI API", icon: SiOpenai, color: "#412991" },
-        { name: "Langchain", icon: FaBrain, color: "#FF6B35" },
         { name: "Hugging Face", icon: SiHuggingface, color: "#FF6B6B" },
         { name: "BeautifulSoup", icon: TbSoup, color: "#FF6B35" },
+        // { name: "TensorFlow", icon: SiTensorflow, color: "#FF6F00" },
+        // { name: "PyTorch", icon: SiPytorch, color: "#EE4C2C" },
+        { name: "OpenAI API", icon: SiOpenai, color: "#412991" },
+        { name: "Langchain", icon: FaBrain, color: "#FF6B35" },
+        { name: "OpenCV", icon: SiOpencv, color: "#5C3EE8" },
+        { name: "Google GenAI", icon: SiGoogle, color: "#4285F4" }, // Google's GenAI
+        { name: "Gemini", icon: SiGoogle, color: "#34A853" }, // Gemini by Google
+        { name: "Vertex AI", icon: SiGoogle, color: "#EA4335" }, // Vertex AI by Google
+        { name: "PaLM", icon: SiGoogle, color: "#FBBC05" }, // PaLM by Google
       ],
       gradient: "from-purple-500 to-pink-600"
     },

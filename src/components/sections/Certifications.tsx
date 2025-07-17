@@ -4,9 +4,23 @@ import { X, ChevronLeft, ChevronRight } from 'lucide-react'
 
 const certifications = [
   { 
+    name: "Build Real World AI Applications with Gemini and Imagen", 
+    logo: "/google.png",
+    level: "Course",
+    images: ["build-real-world-ai-applications-with-gemini-and-im.png"],
+    credentialUrl: "https://www.credly.com/badges/1e59bde4-b327-485b-82b1-77b918ead6ec/public_url" 
+  },
+  { 
+    name: "AI Agent Architect", 
+    logo: "/ibm-logo.jpg",
+    level: "Specialization",
+    images: ["/Getting Started with Artificial Intelligence.png","/Digital Sticker_The Rise of Multiagent Systems.png","/Digital Sticker_Unleashing the Power of AI Agents.png"],
+    credentialUrl: "https://www.credly.com/badges/2e0ef93f-7270-4141-9165-5a27d7b5bdec/public_url" 
+  },
+  { 
     name: "Google AI Essentials", 
     logo: "/google.png",
-    level: "Specialisation",
+    level: "Specialization",
     images: ["/Google AI Essentials- Nandini Nema.jpg", "google-ai-essentials-v1.png"],
     credentialUrl: "https://www.credly.com/badges/09db823e-d317-45ab-929b-3974d660bb16/public_url" 
   },
