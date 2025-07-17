@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { Mail, Phone, MapPin, Github, Linkedin, Twitter, Send } from 'lucide-react'
-import { SiMedium } from 'react-icons/si' // Add this import
+import { SiMedium, SiCredly } from 'react-icons/si' // Use SiCredly for Credly logo
+import { FaCertificate } from 'react-icons/fa6' // Add this import
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -94,6 +95,12 @@ export function Contact() {
       label: "Medium",
       href: "https://medium.com/@nandininema07",
       color: "hover:text-black"
+    },
+    {
+      icon: SiCredly,
+      label: "Credly",
+      href: "https://www.credly.com/users/nandini-nema",
+      color: "hover:text-[#FF6B00]" // Official Credly orange
     },
   ]
 

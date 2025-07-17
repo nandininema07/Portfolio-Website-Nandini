@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react'
-import { SiMedium } from 'react-icons/si' // Add this import
+import { SiMedium, SiCredly } from 'react-icons/si' // Use SiCredly for Credly logo
 import { Button } from '@/components/ui/button'
 import { Scene3D } from '../3d/Scene3D'
 
@@ -94,20 +94,12 @@ export function Hero() {
               transition={{ delay: 1, duration: 0.6 }}
               className="flex gap-4"
             >
-              {/*
-                { icon: Github, href: 'https://github.com/nandininema07' },
-                { icon: Linkedin, href: 'https://www.linkedin.com/in/nandininema/' },
-                { icon: Mail, href: 'mailto:nandininema07@gmail.com' },
-              */}
-              {/*
-                { icon: SiMedium, href: 'https://medium.com/@nandininema07' } // Add Medium
-              */}
-              { [
-                { icon: Github, href: 'https://github.com/nandininema07' },
-                { icon: Linkedin, href: 'https://www.linkedin.com/in/nandininema/' },
-                { icon: SiMedium, href: 'https://medium.com/@nandininema07' },   // Add Medium
-                { icon: Mail, href: 'mailto:nandininema07@gmail.com' }
-                
+              {[
+                { icon: Github, href: 'https://github.com/nandininema07', color: '#181717' },
+                { icon: Linkedin, href: 'https://www.linkedin.com/in/nandininema/', color: '#0077B5' },
+                { icon: SiMedium, href: 'https://medium.com/@nandininema07', color: '#12100E' },
+                { icon: Mail, href: 'mailto:nandininema07@gmail.com', color: '#EA4335' },
+                { icon: SiCredly, href: 'https://www.credly.com/users/nandini-nema', color: '#FF6B00' } // Official Credly logo and color
               ].map((social, index) => (
                 <motion.a
                   key={index}
@@ -115,8 +107,10 @@ export function Hero() {
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                   className="p-3 rounded-full bg-background/20 backdrop-blur-sm border border-primary/20 hover:border-primary/40 transition-all duration-300"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  <social.icon className="w-5 h-5 text-primary" />
+                  <social.icon className="w-5 h-5" color={social.color} />
                 </motion.a>
               ))}
             </motion.div>
