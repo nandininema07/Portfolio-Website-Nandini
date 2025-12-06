@@ -8,6 +8,33 @@ import { Badge } from '@/components/ui/badge'
 export function Projects() {
   const projects = [
     {
+      title: "T.E.J.A.S- Transmission & Energy Joint Analytics System",
+      description: "AI-powered supply chain command center for India's critical transmission infrastructure. Predict demand, optimize procurement, and eliminate project delays.",
+      image: "/TEJAS.jpg",
+      category: ["Website Development","AI/ML"],
+      technologies: [ "Next.js", "Flask","Python","PostgreSQL","Supabase"],
+      features: ["Power Transmission System", "Supply Chain Management", "AI Agents", "Project Management"],
+      status: "Live",
+      links: {
+        github: "https://github.com/nandininema07/T.E.J.A.S",
+        live: "https://tejas-init-to-winit.vercel.app/"
+      }
+    },
+    {
+      title: "AURA: Agentic Urban Resilience Architecture",
+      description: "Predictive Healthcare Management for Urban Mumbai- Transform your hospital operations with AI-powered predictive intelligence. AURA anticipates patient surges, optimizes resources, and ensures workforce resilience before crises escalate.",
+      image: "/AURA.jpg",
+      category: ["AI/ML"," Full Stack","Website Development"],
+      technologies: [ "Next.js", "Flask","Python","PostgreSQL","Supabase"],
+      features: ["Predictive Heathcare", "Agentic AI", "Real-time Tracking"],
+      status: "Live",
+      links: {
+        github: "https://github.com/nandininema07/AURA-Agentic-Urban-Resilience-Architecture",
+        demo: "https://www.youtube.com/watch?v=7Z9oXU4qx5s",
+        live: "https://aura-init-to-winit.vercel.app/"
+      }
+    },
+    {
       title: "AgentFlow - Agentic AI Marketplace",
       description: "Agentic AI Platform for Streamlined Agent Development",
       image: "/D2K 3.jpeg",
@@ -16,6 +43,7 @@ export function Projects() {
       features: ["AI Agent Marketplace", "Real-time Chat", "No-code Agent Development", "Agent Dashboard"],
       status: "Live",
       links: {
+        github: "https://github.com/nandininema07/Agentflow",
         demo: "https://www.youtube.com/watch?v=9vzwt6VrFLQ"
       }
     },
@@ -23,12 +51,12 @@ export function Projects() {
       title: "DDoS Shield",
       description: "DDoS Detection and Mitigation System in Real-time using Machine Learning",
       image: "/DDoS1.jpg",
-      category: ["Cyber Security","AI/ML"],
+      category: ["Cyber Security","AI/ML","Full Stack"],
       technologies: ["Python", "TensorFlow Lite", "CICFlowMeter"],
       features: ["DDoS Detection", "Real-time Mitigation", "Machine Learning", "CICFlowMeter"],
-      status: "Development",
+      status: "Live",
       links: {
-        github: "https://github.com/nandininema07/DDoS-Detection-and-Analysis-using-ML",
+        github: "https://github.com/nandininema07/DDoS-Shield",
         demo: "https://youtu.be/Pbu9E7b5f_M"
       }
     },
@@ -57,33 +85,20 @@ export function Projects() {
         github: "https://github.com/nandininema07/Innovatrix-DevQuest ",
         demo: "https://youtu.be/-NLv9LkT9CI"
       }
-    },
-    {
-      title: "ChillSlots - Game and Arcade Booking Website",
-      description: "ChillSlots is a comprehensive digital platform that simplifies and streamlines the process of booking gaming and sports activities.",
-      image: "/Chillslots.jpg",
-      category: ["Website Development"],
-      technologies: ["HTML", "CSS", "JavaScript", "MongoDB"],
-      features: ["Real-time Avalability", "Booking System", "Payment Integration", "User Authentication"],
-      status: "Live",
-      links: {
-        demo: "https://youtu.be/En9ncngWQ-0",
-        github: "https://github.com/nandininema07/CHILLSLOTS"
-      }
-    },
-    {
-      title: "SeismoTrack - Seismic Tracking System for Celestial Bodies",
-      description: "SeismoTrack is a machine learning pipeline that analyzes seismic data from multiple celestial bodies to detect, track, filter and transmit seismic events.",
-      image: "/NASA 1.png",
-      category: ["AI/ML", "Data Science"],
-      technologies: ["Scikit-learn", "SciPy", "Flask", "NASA APIs", "D3.js", "Python"],
-      features: ["Seismic Event Detection", "Real-time Tracking", "Data Filtering", "Data Transmission"],
-      status: "Live",
-      links: {
-        github: "https://github.com/AAGAM17/sesimotrack",
-        demo: "https://youtu.be/ZMeOc4oTTZ0"
-      }
     }
+    // {
+    //   title: "ChillSlots - Game and Arcade Booking Website",
+    //   description: "ChillSlots is a comprehensive digital platform that simplifies and streamlines the process of booking gaming and sports activities.",
+    //   image: "/Chillslots.jpg",
+    //   category: ["Website Development"],
+    //   technologies: ["HTML", "CSS", "JavaScript", "MongoDB"],
+    //   features: ["Real-time Avalability", "Booking System", "Payment Integration", "User Authentication"],
+    //   status: "Live",
+    //   links: {
+    //     demo: "https://youtu.be/En9ncngWQ-0",
+    //     github: "https://github.com/nandininema07/CHILLSLOTS"
+    //   }
+    // }
   ]
 
   const categories = ["All", "Full Stack", "AI/ML", "Website Development", "Cyber Security", "Data Science"]
